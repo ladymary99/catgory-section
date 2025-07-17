@@ -11,20 +11,10 @@ import "./App.css";
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
+return (
+  <div className="app">
+    <CategorySection />
+  </div>
+);
 
-
-    // Clean up
-    return () => {
-      anchorLinks.forEach((link) => {
-        link.removeEventListener("click", () => {});
-      });
-    };
-  }, []);
-
-  return (
-    <div className="app">
-      <CategorySection />
-    </div>
-  );
-}
 export default App;

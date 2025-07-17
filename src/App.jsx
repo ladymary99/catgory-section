@@ -8,13 +8,17 @@ import CategorySection from "./components/CategorySection";
 
 import "./App.css";
 
-// Register GSAP plugins
-gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+function App() {
+  useEffect(() => {
+    // Register GSAP plugins
+    gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+  }, []);
 
-return (
-  <div className="app">
-    <CategorySection />
-  </div>
-);
+  return (
+    <div className="app">
+      <CategorySection />
+    </div>
+  );
+}
 
 export default App;
